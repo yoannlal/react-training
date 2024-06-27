@@ -26,7 +26,7 @@ app.get("/recipes", (req, res) => {
 app.post("/recipes", (req, res) => {
   const newRecipe = {
     ...req.body,
-    uuid: recipesJson[recipesJson.length - 1].uuid,
+    uuid: recipesJson[recipesJson.length - 1].uuid + 1,
   };
 
   recipesJson.push(newRecipe);
